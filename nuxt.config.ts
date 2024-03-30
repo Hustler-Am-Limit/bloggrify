@@ -61,7 +61,7 @@ export default defineNuxtConfig({
             theme: {
                 default: 'catppuccin-frappe',
                 // Theme used if `html.dark`
-                dark: 'github-dark',
+                // dark: 'github-dark',
             },
         },
     },
