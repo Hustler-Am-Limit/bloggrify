@@ -166,16 +166,16 @@ watch(Escape, () => {
 
 <template>
     <button
-        class="border-gray-200 border p-1 px-2 rounded-lg text-sm hover:border-gray-400 flex items-center justify-center gap-1 dark:text-slate-100 hover:dark:text-slate-400"
+        class="border-gray-200 border p-1 px-2 rounded-lg text-sm hover:border-gray-400 flex items-center justify-center gap-1"
         type="button"
         aria-label="Search"
         @click="show = true"
     >
-        <svg class="w-3 h-3 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+        <svg class="w-3 h-3 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
         </svg>
         <span>
-            <span>Search</span>
+            <span>Suche</span>
         </span>
     </button>
 
@@ -189,14 +189,14 @@ watch(Escape, () => {
         >
             <div class="relative p-4 w-full max-w-2xl overflow-auto max-h-2xl ">
                 <div
-                    class="relative bg-white rounded-lg shadow dark:bg-gray-700 dark:border-gray-600 dark:border"
+                    class="relative bg-white rounded-lg shadow"
                     @click.stop
                 >
                     <div class="flex gap-3 p-4 ">
-                        <label for="simple-search" class="sr-only">Search</label>
+                        <label for="simple-search" class="sr-only">Suche</label>
                         <div class="relative w-full">
                             <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                                 </svg>
                             </div>
@@ -204,7 +204,7 @@ watch(Escape, () => {
                                 id="simple-search" v-model="q"
                                 type="text"
                                 placeholder="Search..."
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
                                 required @keydown.up.prevent="up" @keydown.down.prevent="down" @keydown.enter="go(selected)"
                             >
                         </div>
@@ -273,7 +273,7 @@ watch(Escape, () => {
     @apply flex flex-col justify-center p-2 cursor-pointer mt-2;
 
     &.selected {
-        @apply bg-gray-100 dark:bg-gray-800;
+        @apply bg-gray-100;
     }
 }
 .search-result-content-wrapper {
@@ -285,7 +285,7 @@ watch(Escape, () => {
 }
 
 .search-result-content-head {
-    @apply flex items-center gap-1 dark:text-slate-100;
+    @apply flex items-center gap-1;
 }
 
 .search-result-content-preview {
