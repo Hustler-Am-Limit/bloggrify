@@ -15,7 +15,7 @@ export default defineEventHandler(async (event) => {
                     // Filter hidden documents from the search results
                     return doc?._extension === 'md' &&
                         doc?._draft === false &&
-                        doc?._hidden === false &&
+                        doc?._hidden !== true &&
                         !doc?._empty
                 }
             )
