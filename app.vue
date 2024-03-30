@@ -27,18 +27,6 @@ useHead({
         },
         { rel: "manifest", href: "/site.webmanifest" },
     ],
-    meta: [
-        {
-            key: "poweredBy",
-            name: "poweredBy",
-            content: "bloggrify",
-        },
-        {
-            key: "bloggrify-theme",
-            name: "bloggrify-theme",
-            content: config.theme,
-        },
-    ],
 });
 </script>
 <style lang="scss">
