@@ -11,14 +11,14 @@
 
         <div
             v-if="isDev && error"
-            class="block mb-5 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+            class="block mb-5 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
         >
             <h5
-                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900"
             >
                 Error
             </h5>
-            <p class="font-normal text-gray-700 dark:text-gray-400">
+            <p class="font-normal text-gray-700">
                 <strong>{{ error.statusCode }}</strong> - {{ error.message }}
             </p>
             <div v-if="error.stack" class="mt-4" v-html="error.stack"></div>

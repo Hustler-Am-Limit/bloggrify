@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="admonition-content">
-            <p class="dark:text-slate-900">
+            <p class="">
                 <slot />
             </p>
         </div>

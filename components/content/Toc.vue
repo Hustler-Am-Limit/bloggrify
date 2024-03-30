@@ -1,7 +1,7 @@
 <template>
-    <div v-if="isTocEnabled" class="w-full lg:w-2/3 mx-auto bg-white rounded-lg border border-gray-200 shadow-md overflow-hidden dark:bg-gray-800 dark:border-gray-700">
+    <div v-if="isTocEnabled" class="w-full lg:w-2/3 mx-auto bg-white rounded-lg border border-gray-200 shadow-md overflow-hidden">
         <div class="p-5">
-            <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-slate-100">
+            <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                 Table of contents
             </h2>
             <p class="mb-3 font-normal ">
