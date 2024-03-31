@@ -1,5 +1,5 @@
 <template>
-    <NuxtLayout v-if="doc.value?.title" :name="theme" :doc="doc" />
+    <NuxtLayout v-if="doc?.title" :name="theme" :doc="doc" />
     <ErrorPage v-else />
 </template>
 <script setup lang="ts">
