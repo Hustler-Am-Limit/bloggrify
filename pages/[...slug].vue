@@ -1,10 +1,7 @@
 <template>
-    <NuxtLayout v-if="doc?.title" :name="theme" :doc="doc" />
-    <ErrorPage v-else />
+    <NuxtLayout :name="theme" :doc="doc" />
 </template>
 <script setup lang="ts">
-import ErrorPage from "../error.vue";
-
 const route = useRoute()
 const { data: doc } = await useAsyncData(route.path, async () => {
     return await queryContent('').where({ _path: route.path }).findOne()
