@@ -165,13 +165,13 @@ watch(Escape, () => {
 
 <template>
     <button
-        class="border-gray-200 border p-1 px-2 rounded-lg text-sm hover:border-gray-400 flex items-center justify-center gap-1"
+        class="border-gray-200 border p-1 px-2 rounded-lg text-base md:text-sm hover:border-gray-400 flex items-center justify-center gap-1"
         type="button"
         aria-label="Suche"
         @click="show = true"
     >
         <svg
-            class="w-3 h-3 text-gray-500"
+            class="w-4 h-4 text-gray-500"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
