@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
                     // Only use `.md` files which are not drafts and has content
                     // Filter hidden documents from the search results
                     return doc?._extension === 'md' &&
-                        doc?._draft === false &&
+                        doc?._draft !== true &&
                         doc?.title !== "Impressum" &&
                         doc?.title !== "Datenschutzerklärung" &&
                         !doc?._empty
