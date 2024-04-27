@@ -29,6 +29,9 @@ useHead({
     ],
 });
 </script>
+
+<!-- !! Hier Design Einstellungen von Markdown !! -->
+
 <style lang="scss">
 @tailwind base;
 @tailwind components;
@@ -36,7 +39,8 @@ useHead({
 
 .prose {
     a {
-        text-decoration: none;
+        //text-decoration: none;
+        font-weight: 500;
     }
 
     img {
