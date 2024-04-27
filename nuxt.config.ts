@@ -33,9 +33,10 @@ export default defineNuxtConfig({
     content: {
         markdown: {
             remarkPlugins: ['remark-reading-time'],
+            /* disable automatic rel="nofollow" on external links */
             rehypePlugins: {
                 'rehype-external-links': false,
-              }        
+              }
         },
         highlight: {
             langs: [
