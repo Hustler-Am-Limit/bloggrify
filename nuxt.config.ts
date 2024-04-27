@@ -33,6 +33,9 @@ export default defineNuxtConfig({
     content: {
         markdown: {
             remarkPlugins: ['remark-reading-time'],
+            rehypePlugins: {
+                'rehype-external-links': false,
+              }        
         },
         highlight: {
             langs: [
