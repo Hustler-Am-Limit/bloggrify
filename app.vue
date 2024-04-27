@@ -37,7 +37,29 @@ useHead({
 @tailwind components;
 @tailwind utilities;
 
-.prose {
+/* Apply styles to all <a> tags within .prose */
+.prose a {
+    /* text-decoration: none; */
+    /* font-weight: 500; */
+}
+
+/* Override styles for <a> tags under any heading within .prose */
+.prose h1 a,
+.prose h2 a,
+.prose h3 a,
+.prose h4 a,
+.prose h5 a,
+.prose h6 a {
+    text-decoration: none;
+}
+
+/* Styles for images within .prose */
+.prose img {
+    max-width: 80%;
+    margin: auto;
+}
+
+/*.prose {
     a {
         //text-decoration: none;
         font-weight: 500;
@@ -47,5 +69,5 @@ useHead({
         max-width: 80%;
         margin: auto;
     }
-}
+}*/
 </style>
