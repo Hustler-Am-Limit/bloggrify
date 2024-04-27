@@ -135,7 +135,7 @@ if (doc.value?.date) {
             },
             {
                 name: 'article:modified_time',
-                content: new Date(doc.value?.modified).toISOString(),
+                content: new Date(doc.value?.modified ? doc.value?.modified : doc.value?.date).toISOString(),
             },
         ],
     })
