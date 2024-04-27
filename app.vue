@@ -59,6 +59,11 @@ useHead({
     margin: auto;
 }
 
+.prose video {
+    max-width: 80%;
+    margin: auto;
+}
+
 /*.prose {
     a {
         //text-decoration: none;
