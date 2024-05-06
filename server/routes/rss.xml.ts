@@ -17,9 +17,10 @@ export default defineEventHandler(async (event) => {
         description: config.description,
         id: url,
         link: url,
+        language: config.language,
         favicon: url + "/favicon.ico",
         copyright: `All rights reserved ${now.getFullYear()}, ${config.name}`,
-        generator: "https://github.com/jpmonette/feed",
+        generator: 'nimsa.at',
     });
     docs.forEach((post) => {
         const path = post._path;
@@ -30,6 +31,7 @@ export default defineEventHandler(async (event) => {
                 link: url + path,
                 description: post.description,
                 date: new Date(post.date),
+                image: post.cover ? url + post.cover : undefined,
             });
         }
     });

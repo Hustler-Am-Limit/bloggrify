@@ -6,9 +6,6 @@ export default defineNuxtConfig({
     },
     app: {
         head: {
-            htmlAttrs: {
-                lang: 'de_AT',
-            },
             script: [
                 ...(process.env.PIRSCH_CODE
                     ? [
@@ -26,7 +23,13 @@ export default defineNuxtConfig({
     },
 
     devtools: { enabled: true },
-    modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '@nuxt/image'],
+    modules: [
+        '@nuxtjs/tailwindcss',
+        '@nuxt/content',
+        '@nuxt/image',
+        '@stefanobartoletti/nuxt-social-share'
+    ],
+
     image: {
         format: ['webp'],
     },
@@ -55,6 +58,7 @@ export default defineNuxtConfig({
                 'yaml',
                 'python',
                 'c',
+                'csharp',
                 'cpp',
                 'sql',
                 'java',

@@ -2,8 +2,6 @@ import { defineEventHandler } from 'h3'
 import { serverQueryContent } from '#content/server'
 
 export default defineEventHandler(async (event) => {
-    const appConfig = useAppConfig()
-
     // Fetch all documents
     let docs = await serverQueryContent(event).find()
 
@@ -15,19 +13,14 @@ export default defineEventHandler(async (event) => {
                     // Filter hidden documents from the search results
                     return doc?._extension === 'md' &&
                         doc?._draft !== true &&
-                        doc?.title !== "Impressum" &&
-                        doc?.title !== "Datenschutzerklärung" &&
+                        doc?.hidden === true &&
+                        // doc?.title !== "Impressum" &&
+                        // doc?.title !== "Datenschutzerklärung" &&
                         !doc?._empty
                 }
             )
             .map(
-                async ({ _id: id, _path: path, _dir: dir, title = '', description = '', body = undefined, ...rest }) => {
-                    const { directoryIcon } = rest
-
-                    if (directoryIcon) {
-                        console.log({ directoryIcon })
-                    }
-
+                async ({ _id: id, _path: path, _dir: dir, title = '', description = '', body = undefined}) => {
                     return {
                         id,
                         path,
@@ -44,7 +37,7 @@ export default defineEventHandler(async (event) => {
     return docs
 })
 
-function extractTextFromAst(node: any) {
+function extractTextFromAst(node: any) : string {
     let text = ''
     if (node.type === 'text') {
         text += node.value
