@@ -23,6 +23,10 @@ export default defineAppConfig({
         // facebook: "https://facebook.com",
         // instagram: "https://instagram.com",
         // github: "https://github.com",
+
+        // possible values : 'facebook', 'twitter', 'linkedin', 'email', 'pinterest', 'reddit', 'pocket', 'whatsapp', 'telegram', 'skype'
+        // see https://github.com/stefanobartoletti/nuxt-social-share
+        sharing_networks: ["twitter", "linkedin", "facebook", "whatsapp"]
     },
 
     newsletter: {
