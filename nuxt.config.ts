@@ -4,23 +4,6 @@ export default defineNuxtConfig({
             prerender: true
         }
     },
-    app: {
-        head: {
-            script: [
-                ...(process.env.PIRSCH_CODE
-                    ? [
-                        {
-                            src: 'https://api.pirsch.io/pirsch.js',
-                            id: 'pirschjs',
-                            defer: true,
-                            'data-code': process.env.PIRSCH_CODE,
-                            type: 'text/javascript',
-                        },
-                    ]
-                    : []),
-            ],
-        },
-    },
 
     devtools: { enabled: true },
     modules: [
@@ -35,11 +18,13 @@ export default defineNuxtConfig({
     },
     content: {
         markdown: {
-            remarkPlugins: ['remark-reading-time'],
-            /* disable automatic rel="nofollow" on external links */
+            remarkPlugins: ['remark-reading-time', 'remark-math', 'remark-mermaidjs'],
             rehypePlugins: {
+                'rehype-katex': true,
+                /* disable automatic rel="nofollow" on external links */
                 'rehype-external-links': false,
               }
+            // rehypePlugins: [],
         },
         highlight: {
             langs: [
@@ -54,6 +39,7 @@ export default defineNuxtConfig({
                 'shell',
                 'bash',
                 'mdc',
+                'mermaid',
                 'md',
                 'yaml',
                 'python',

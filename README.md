@@ -8,12 +8,12 @@
 
 [Getting started](https://bloggrify.com/introduction/getting-started) | [Homepage](https://bloggrify.com)
 
-  <a href="https://github.com/hlassiege/bloggrify/releases/latest">
-    <img src="https://img.shields.io/github/release/hlassiege/bloggrify.svg?style=flat-square" alt="">
+  <a href="https://github.com/bloggrify/bloggrify/releases/latest">
+    <img src="https://img.shields.io/github/release/bloggrify/bloggrify.svg?style=flat-square" alt="">
   </a>
 
-  <a href="https://github.com/hlassiege/bloggrify/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/hlassiege/bloggrify.svg?style=flat-square" alt="">
+  <a href="https://github.com/bloggrify/bloggrify/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/bloggrify/bloggrify.svg?style=flat-square" alt="">
   </a>
 
 </div>
@@ -22,7 +22,7 @@ Bloggrify is built on top of
 * Nuxt.js 
 * Tailwind CSS
 * Nuxt-Content 
-* and other cool stuff (Hyvor Talk, mailerlite, etc...)
+* and other cool stuff (Hyvor Talk, RssFeedPulse, etc...)
 
 It is a **static** blog generator that uses markdown files to generate blog posts.
 
@@ -63,6 +63,9 @@ npm install
 ### Development Server
 
 Start the development server on http://localhost:3000
+
+Running bloggrify alone without templates won't be really useful.   
+
 
 ```bash
 npm run dev

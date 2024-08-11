@@ -7,4 +7,4 @@ function formatDate(date: string | number): string {
     return new Date(date).toLocaleDateString("de", options);
 }
 
-export { formatDate };
+export { formatDate }
